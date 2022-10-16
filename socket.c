@@ -58,13 +58,10 @@ int sendHttpGET(int socket,const char *html)
 int main(void) 
 {
 	char host[10];
-	
-	
-	//get ip addres
 	SOCKET socket = startHTTPlistener(TCP_DEFAULT_PORT);
 	
-    SOCKET s =SOCKET_ERROR;
-     printf("listening...\n");
+        SOCKET s =SOCKET_ERROR;
+        printf("listening...\n");
 	
 	s = accept(socket, NULL, NULL);
 	printf("connected\n");
@@ -73,12 +70,6 @@ int main(void)
 	sendHttpGET(s,"<h1>Total Page Views:10</h1>");
 
 	printf("socket :%d\n", s);
-	
-	
-	
-	
-	
 
-
-		return 0;
+	return 0;
 }
