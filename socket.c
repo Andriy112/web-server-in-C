@@ -26,19 +26,19 @@ SOCKET startHTTPlistener(int port)
 	SOCKET _socket = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	if (_socket == SOCKET_ERROR)
 	{
-		fprintf(stderr,"[Error] %d in socket()",GetLastError());
+		fprintf(stderr,"[Error] %d method socket()",GetLastError());
 	}
 	
 	int res = bind(_socket, &server_addr, sizeof(SOCKADDR));
 	if (res == -1)
 	{
-		fprintf(stderr,"[Error] %d in bind()", GetLastError());
+		fprintf(stderr,"[Error] %d method bind()", GetLastError());
 	}
 
 	res = listen(_socket, 100);
 	if (res == -1)
 	{
-		fprintf(stderr"[Error] %d in listen()", GetLastError());
+		fprintf(stderr,"[Error] %d method listen()", GetLastError());
 	}
 	return _socket;
 }
