@@ -53,7 +53,7 @@ int sendHttpGET(int socket,const char *html)
 	strcat(response,ending);
 
 
-	return send(socket, response, strlen(response), NULL);;
+	return send(socket, response, strlen(response), NULL);
 }
 
 int main(void) 
