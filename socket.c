@@ -46,7 +46,7 @@ int sendHttpGET(int socket,const char *html)
 {
 	char *header ="HTTP/1.x 200 OK \n Transfer-Encoding: chunked \n\n <html><body>";
 	char* ending = "</html></body>";
-	char *response = malloc(strlen(html)+strlen(ending)+);
+	char *response = malloc(strlen(html)+strlen(ending)+strlen(header));
 
 	strcpy(response, header);
 	strcat(response,html);
