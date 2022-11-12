@@ -44,10 +44,11 @@ SOCKET startHTTPlistener(int port)
 }
 int sendHttpGET(int socket,const char *html) 
 {
+	char *header ="HTTP/1.x 200 OK \n Transfer-Encoding: chunked \n\n <html><body>";
 	char* ending = "</html></body>";
-	char *response = malloc(1000);
+	char *response = malloc(strlen(html)+strlen(ending)+);
 
-	strcpy(response, "HTTP/1.x 200 OK \n Transfer-Encoding: chunked \n\n <html><body>");
+	strcpy(response, header);
 	strcat(response,html);
 	strcat(response,ending);
 
