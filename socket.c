@@ -9,7 +9,6 @@
 #include <iphlpapi.h>
 #include <netioapi.h>
 #include <icmpapi.h>
-#include <assert.h>
 #include <stdio.h>
 
 SOCKET startHTTPlistener(int port) 
