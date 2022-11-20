@@ -64,6 +64,7 @@ int main(void)
         printf("listening...\n");
 	
 	s = accept(socket, NULL, NULL);
+	//signal
 	printf("connected\n");
 	Beep(750, 750);
 	
