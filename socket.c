@@ -1,7 +1,7 @@
 #pragma comment(lib,"Ws2_32.lib")
 #pragma comment(lib,"Iphlpapi.lib")
 #define _WINSOCK_DEPRECATED_NO_WARNINGS 
-#define TCP_DEFAULT_PORT 8888
+#define _DEFAULT_PORT 8888
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <winsock2.h>
@@ -58,7 +58,7 @@ int sendHttpGET(int socket,const char *html)
 int main(void) 
 {
 	char host[10];
-	SOCKET socket = startHTTPlistener(TCP_DEFAULT_PORT);
+	SOCKET socket = startHTTPlistener(_DEFAULT_PORT);
 	
         SOCKET s =SOCKET_ERROR;
         printf("listening...\n");
